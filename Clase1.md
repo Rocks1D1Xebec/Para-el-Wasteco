@@ -119,9 +119,5 @@ storash(ejemplo: disco duro), NAS(Para poner discos + S.O específicos para NAS)
 * **Vereficar que los equipos que se quieren se quieren admitir tengan acceso**
 * **Establecer limin de equipos**
 
-
-
-
-
-
-
+DNS, pasa de nombre de dominio(url/link) a ip
+NAS, como un drive pero de varios discos duros(tu los pones), storash
