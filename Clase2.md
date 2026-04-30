@@ -80,3 +80,6 @@ Brecha digital: no todoas las personas tienen el mismo acceso a equipos, interne
 privacidad: la informacion viaja por redes y debe protegerse ante accesos no autorizados
 dependencia tecnologica: servivicos criticos pueden detenerse si o no se diseña continuidad y respaldo
 uso responsable: evitar abuso de recursos, desinformacion, ataques y practicas inseguras
+
+1. la conectividad transformada procesos sociales, comerciales e instituciones
+2. 
