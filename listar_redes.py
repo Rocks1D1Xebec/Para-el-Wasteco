@@ -48,7 +48,7 @@ for a, b in enlaces:
     vecinos.setdefault(b, []).append(a)
 
 for dispositivo, lista in vecinos.items():
-    print(dispositivo, '->', lista)"""
+    print(dispositivo, '->', lista)
 
 from collections import deque
 
@@ -74,3 +74,41 @@ def buscar_ruta(origen, destino):
                 cola.append(ruta + [v])
 
 print(buscar_ruta('PC1', 'PC4'))
+
+enlaces=[('R1', 'R2'), ('R2', 'R3'), ('R3', 'R4'), ('R4', 'R1'), ('R1', 'R3')]
+
+def quitar_enlace(lista, enlace_caido):
+    a, b=enlace_caido
+    return [e for e in lista if e != (a,b) and e != (b,a)]
+
+print('Enlaces originales:', enlaces)
+
+nueva_red=quitar_enlace(enlaces, ('R1', 'R3'))
+print('Despues de la falla:', nueva_red)
+print('Cantidad de enlaces restantes:', len(nueva_red))
+
+def clasificar_red(distancia_km, medio):
+    if medio.lower() == 'wifi' and distancia_km <= 0.1:
+        return 'WLAN'
+    elif distancia_km<=1:
+        return 'LAN'
+    elif distancia_km<=50:
+        return 'MAN'
+    else:
+        return 'WAN'
+
+casos=[(0.05, 'WiFi'), (0.5, 'utp'), (15, 'fibra'), (700, 'fibra')]
+
+for distancia, medio in casos:
+    print(distancia, 'km', medio, '->', clasificar_red(distancia, medio))"""
+
+
+def enlaces_estrella(n_hosts):
+    return n_hosts
+def enlaces_malla_completa(n_hosts):
+    return n_hosts * (n_hosts - 1) // 2
+for n in [4,5,6,10]:
+    print('Nodos:', n)
+    print('Estrella:', enlaces_estrella(n-1), 'enlaces')
+    print('Malla completa:', enlaces_malla_completa(n), 'enlaces')
+    print('---')
